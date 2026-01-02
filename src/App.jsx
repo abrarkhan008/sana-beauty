@@ -15,34 +15,364 @@ const SanaBeautySalon = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const services = [
-    { id: 1, title: "South Indian HD Looks", photos: 9, price: "₹10,000" },
-    { id: 2, title: "International Certified", photos: 4, price: "Contact" },
-    { id: 3, title: "Open Hairs Look", photos: 10, price: "₹2,000" },
+    {
+      id: 1,
+      title: "South Indian HD Looks",
+      price: "₹10,000",
+      images: [
+        "/images/services/south/1.jpg",
+        "/images/services/south/2.jpg",
+        "/images/services/south/3.jpg",
+        "/images/services/south/4.jpg",
+        "/images/services/south/5.jpg",
+        "/images/services/south/6.jpg",
+        "/images/services/south/7.jpg",
+        "/images/services/south/8.jpg",
+        "/images/services/south/9.jpg",
+      ],
+    },
+    {
+      id: 2,
+      title: "International Certified",
+      images: [
+        "/images/services/certificate/1.jpg",
+        "/images/services/certificate/2.jpg",
+        "/images/services/certificate/3.jpg",
+        "/images/services/certificate/4.jpg",
+      ],
+    },
+    {
+      id: 3,
+      title: "Open Hairs Look",
+      price: "₹2,000",
+      images: [
+        "/images/services/open/1.jpg",
+        "/images/services/open/2.jpg",
+        "/images/services/open/3.jpg",
+        "/images/services/open/4.jpg",
+        "/images/services/open/5.jpg",
+        "/images/services/open/6.jpg",
+        "/images/services/open/7.jpg",
+        "/images/services/open/8.jpg",
+        "/images/services/open/9.jpg",
+        "/images/services/open/10.jpg",
+      ],
+    },
     {
       id: 4,
       title: "Maharashtrian Kasouta Look HD",
-      photos: 8,
       price: "₹12,000",
+      images: [
+        "/images/services/maharashtrian/1.jpg",
+        "/images/services/maharashtrian/2.jpg",
+        "/images/services/maharashtrian/3.jpg",
+        "/images/services/maharashtrian/4.jpg",
+        "/images/services/maharashtrian/5.jpg",
+        "/images/services/maharashtrian/6.jpg",
+        "/images/services/maharashtrian/7.jpg",
+        "/images/services/maharashtrian/8.jpg",
+      ],
     },
-    { id: 5, title: "Heavy Look with Lense HD", photos: 8, price: "₹10,000" },
+    {
+      id: 5,
+      title: "Heavy Look with Lense HD",
+      price: "₹10,000",
+      images: [
+        "/images/services/heavy/1.jpg",
+        "/images/services/heavy/2.jpg",
+        "/images/services/heavy/3.jpg",
+        "/images/services/heavy/4.jpg",
+        "/images/services/heavy/5.jpg",
+        "/images/services/heavy/6.jpg",
+        "/images/services/heavy/7.jpg",
+        "/images/services/heavy/8.jpg",
+      ],
+    },
     {
       id: 6,
       title: "Maharashtrian/South Indian Look",
-      photos: 10,
       price: "₹12,000",
+      images: [
+        "/images/services/maharashtrian-south/1.jpg",
+        "/images/services/maharashtrian-south/2.jpg",
+        "/images/services/maharashtrian-south/3.jpg",
+        "/images/services/maharashtrian-south/4.jpg",
+        "/images/services/maharashtrian-south/5.jpg",
+        "/images/services/maharashtrian-south/6.jpg",
+        "/images/services/maharashtrian-south/7.jpg",
+        "/images/services/maharashtrian-south/8.jpg",
+        "/images/services/maharashtrian-south/9.jpg",
+      ],
     },
-    { id: 7, title: "HD Look", photos: 4, price: "₹7,000" },
-    { id: 8, title: "Engagement Look", photos: 5, price: "₹6,000" },
-    { id: 9, title: "Heavy Curls", photos: 8, price: "₹2,000" },
-    { id: 10, title: "Trending Hairstyles", photos: 9, price: "₹1,000" },
-    { id: 11, title: "3D Look", photos: 5, price: "₹6,500" },
-    { id: 12, title: "Engagement Look Premium", photos: 5, price: "₹5,000" },
-    { id: 13, title: "Airbrush Look", photos: 6, price: "₹12,000" },
+    {
+      id: 7,
+      title: "HD Look",
+      price: "₹7,000",
+      images: [
+        "/images/services/hd/1.jpg",
+        "/images/services/hd/2.jpg",
+        "/images/services/hd/3.jpg",
+        "/images/services/hd/4.jpg",
+      ],
+    },
+    {
+      id: 8,
+      title: "Engagement Look",
+      price: "₹6,000",
+      images: [
+        "/images/services/engagement/1.jpg",
+        "/images/services/engagement/2.jpg",
+        "/images/services/engagement/3.jpg",
+        "/images/services/engagement/4.jpg",
+        "/images/services/engagement/5.jpg",
+      ],
+    },
+    {
+      id: 9,
+      title: "Heavy Curls",
+      price: "₹2,000",
+      images: [
+        "/images/services/curls/1.jpg",
+        "/images/services/curls/2.jpg",
+        "/images/services/curls/3.jpg",
+        "/images/services/curls/4.jpg",
+        "/images/services/curls/5.jpg",
+        "/images/services/curls/6.jpg",
+        "/images/services/curls/7.jpg",
+        "/images/services/curls/8.jpg",
+      ],
+    },
+    {
+      id: 10,
+      title: "Trending Hairstyles",
+      price: "₹1,000",
+      images: [
+        "/images/services/trending/1.jpg",
+        "/images/services/trending/2.jpg",
+        "/images/services/trending/3.jpg",
+        "/images/services/trending/4.jpg",
+        "/images/services/trending/5.jpg",
+        "/images/services/trending/6.jpg",
+        "/images/services/trending/7.jpg",
+        "/images/services/trending/8.jpg",
+        "/images/services/trending/9.jpg",
+      ],
+    },
+    {
+      id: 11,
+      title: "3D Look",
+      price: "₹6,500",
+      images: [
+        "/images/services/3d/1.jpg",
+        "/images/services/3d/2.jpg",
+        "/images/services/3d/3.jpg",
+        "/images/services/3d/4.jpg",
+        "/images/services/3d/5.jpg",
+      ],
+    },
+    {
+      id: 12,
+      title: "Engagement Look Premium",
+      price: "₹5,000",
+      images: [
+        "/images/services/engagement-premium/1.jpg",
+        "/images/services/engagement-premium/2.jpg",
+        "/images/services/engagement-premium/3.jpg",
+        "/images/services/engagement-premium/4.jpg",
+        "/images/services/engagement-premium/5.jpg",
+      ],
+    },
+    {
+      id: 13,
+      title: "Airbrush Look",
+      price: "₹12,000",
+      images: [
+        "/images/services/airbrush/1.jpg",
+        "/images/services/airbrush/2.jpg",
+        "/images/services/airbrush/3.jpg",
+        "/images/services/airbrush/4.jpg",
+        "/images/services/airbrush/5.jpg",
+        "/images/services/airbrush/6.jpg",
+      ],
+    },
     {
       id: 14,
       title: "HD Makeup for Christian Bride",
-      photos: 9,
       price: "₹10,000",
+      images: [
+        "/images/services/hd-christian/1.jpg",
+        "/images/services/hd-christian/2.jpg",
+        "/images/services/hd-christian/3.jpg",
+        "/images/services/hd-christian/4.jpg",
+        "/images/services/hd-christian/5.jpg",
+        "/images/services/hd-christian/6.jpg",
+        "/images/services/hd-christian/7.jpg",
+        "/images/services/hd-christian/8.jpg",
+        "/images/services/hd-christian/9.jpg",
+      ],
+    },
+    {
+      id: 15,
+      title: "HD Look in Pakistani Style",
+      price: "₹10,000",
+      images: [
+        "/images/services/hd-pakistani/1.jpg",
+        "/images/services/hd-pakistani/2.jpg",
+        "/images/services/hd-pakistani/3.jpg",
+        "/images/services/hd-pakistani/4.jpg",
+        "/images/services/hd-pakistani/5.jpg",
+        "/images/services/hd-pakistani/6.jpg",
+        "/images/services/hd-pakistani/7.jpg",
+        "/images/services/hd-pakistani/8.jpg",
+      ],
+    },
+    {
+      id: 16,
+      title: "Beautiful HD Look",
+      price: "₹8,000",
+      images: [
+        "/images/services/beautiful-hd/1.jpg",
+        "/images/services/beautiful-hd/2.jpg",
+        "/images/services/beautiful-hd/3.jpg",
+        "/images/services/beautiful-hd/4.jpg",
+        "/images/services/beautiful-hd/5.jpg",
+        "/images/services/beautiful-hd/6.jpg",
+      ],
+    },
+    {
+      id: 17,
+      title: "Reception Look",
+      price: "₹7,500",
+      images: [
+        "/images/services/reception/1.jpg",
+        "/images/services/reception/2.jpg",
+        "/images/services/reception/3.jpg",
+        "/images/services/reception/4.jpg",
+        "/images/services/reception/5.jpg",
+        "/images/services/reception/6.jpg",
+      ],
+    },
+    {
+      id: 18,
+      title: "Pakistani HD + Airbrush Look",
+      price: "₹15,000",
+      images: [
+        "/images/services/pakistani-airbrush/1.jpg",
+        "/images/services/pakistani-airbrush/2.jpg",
+        "/images/services/pakistani-airbrush/3.jpg",
+        "/images/services/pakistani-airbrush/4.jpg",
+        "/images/services/pakistani-airbrush/5.jpg",
+        "/images/services/pakistani-airbrush/6.jpg",
+        "/images/services/pakistani-airbrush/7.jpg",
+        "/images/services/pakistani-airbrush/8.jpg",
+        "/images/services/pakistani-airbrush/9.jpg",
+        "/images/services/pakistani-airbrush/10.jpg",
+      ],
+    },
+    {
+      id: 19,
+      title: "Full HD Look",
+      price: "₹8,000",
+      images: [
+        "/images/services/full-hd/1.jpg",
+        "/images/services/full-hd/2.jpg",
+        "/images/services/full-hd/3.jpg",
+        "/images/services/full-hd/4.jpg",
+        "/images/services/full-hd/5.jpg",
+      ],
+    },
+    {
+      id: 20,
+      title: "Engagement Look 2",
+      price: "₹7,500",
+      images: [
+        "/images/services/engagement-2/1.jpg",
+        "/images/services/engagement-2/2.jpg",
+        "/images/services/engagement-2/3.jpg",
+        "/images/services/engagement-2/4.jpg",
+        "/images/services/engagement-2/5.jpg",
+        "/images/services/engagement-2/6.jpg",
+        "/images/services/engagement-2/7.jpg",
+        "/images/services/engagement-2/8.jpg",
+        "/images/services/engagement-2/9.jpg",
+        "/images/services/engagement-2/10.jpg",
+      ],
+    },
+    {
+      id: 21,
+      title: "Engagement Look (Customer Demand)",
+      price: "₹6,500",
+      images: [
+        "/images/services/engagement-demand/1.jpg",
+        "/images/services/engagement-demand/2.jpg",
+        "/images/services/engagement-demand/3.jpg",
+        "/images/services/engagement-demand/4.jpg",
+        "/images/services/engagement-demand/5.jpg",
+      ],
+    },
+    {
+      id: 22,
+      title: "Beautiful Nikaah Look in Hijab",
+      price: "₹8,000",
+      images: [
+        "/images/services/nikaah-hijab/1.jpg",
+        "/images/services/nikaah-hijab/2.jpg",
+        "/images/services/nikaah-hijab/3.jpg",
+        "/images/services/nikaah-hijab/4.jpg",
+        "/images/services/nikaah-hijab/5.jpg",
+      ],
+    },
+    {
+      id: 23,
+      title: "Nikah Look (Pakistani)",
+      price: "₹8,000",
+      images: [
+        "/images/services/nikah-pakistani/1.jpg",
+        "/images/services/nikah-pakistani/2.jpg",
+        "/images/services/nikah-pakistani/3.jpg",
+        "/images/services/nikah-pakistani/4.jpg",
+        "/images/services/nikah-pakistani/5.jpg",
+        "/images/services/nikah-pakistani/6.jpg",
+        "/images/services/nikah-pakistani/7.jpg",
+        "/images/services/nikah-pakistani/8.jpg",
+        "/images/services/nikah-pakistani/9.jpg",
+        "/images/services/nikah-pakistani/10.jpg",
+      ],
+    },
+    {
+      id: 24,
+      title: "Reception Look with Hijab",
+      price: "₹7,500",
+      images: [
+        "/images/services/reception-hijab/1.jpg",
+        "/images/services/reception-hijab/2.jpg",
+        "/images/services/reception-hijab/3.jpg",
+        "/images/services/reception-hijab/4.jpg",
+        "/images/services/reception-hijab/5.jpg",
+        "/images/services/reception-hijab/6.jpg",
+        "/images/services/reception-hijab/7.jpg",
+      ],
+    },
+    {
+      id: 25,
+      title: "HD Look (Party Makeup)",
+      price: "₹4,500",
+      images: [
+        "/images/services/hd-party/1.jpg",
+        "/images/services/hd-party/2.jpg",
+      ],
+    },
+    {
+      id: 26,
+      title: "HD Makeup + Russian Hairdo",
+      price: "₹8,000",
+      images: [
+        "/images/services/hd-russian/1.jpg",
+        "/images/services/hd-russian/2.jpg",
+        "/images/services/hd-russian/3.jpg",
+        "/images/services/hd-russian/4.jpg",
+        "/images/services/hd-russian/5.jpg",
+      ],
     },
   ];
 
@@ -58,14 +388,18 @@ const SanaBeautySalon = () => {
 
   const nextImage = () => {
     if (selectedGallery) {
-      setCurrentImageIndex((prev) => (prev + 1) % selectedGallery.photos);
+      setCurrentImageIndex(
+        (prev) => (prev + 1) % selectedGallery.images.length
+      );
     }
   };
 
   const prevImage = () => {
     if (selectedGallery) {
       setCurrentImageIndex(
-        (prev) => (prev - 1 + selectedGallery.photos) % selectedGallery.photos
+        (prev) =>
+          (prev - 1 + selectedGallery.images.length) %
+          selectedGallery.images.length
       );
     }
   };
@@ -83,20 +417,17 @@ const SanaBeautySalon = () => {
           }}
         /> */}
         <div
-          className="absolute inset-0 bg-cover bg-center filter blur-md scale-110"
+          className="absolute inset-0 bg-cover bg-center filter blur-md scale-110 pointer-events-none"
           style={{
             backgroundImage: "url('/images/my-photo.jpg')",
           }}
         />
-
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/70 to-pink-900/70" />
-
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/70 to-pink-900/70 pointer-events-none" />
         {/* Animated shine effect */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-yellow-300 to-transparent transform rotate-12 animate-[shine_4s_ease-in-out_infinite]" />
         </div>
-
         {/* Content */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-white px-4 py-12">
           {/* Logo with your S design
@@ -113,20 +444,22 @@ const SanaBeautySalon = () => {
           </div> */}
           {/* Logo with image */}
           <div className="mb-6 sm:mb-8 animate-[fadeIn_1s_ease-out]">
-            <div
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full 
-    bg-gradient-to-br from-yellow-300 via-yellow-400 to-amber-500 
-    flex items-center justify-center shadow-2xl 
-    border-4 border-yellow-200/50 relative overflow-hidden"
-            >
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full">
               {/* Light shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent animate-pulse z-20" />
 
-              {/* Your Photo */}
+              {/* Photo */}
               <img
-                src="/my-photo.jpg" // 👈 replace with your photo path
+                src="/my-photo.jpg"
                 alt="Profile Photo"
-                className="w-full h-full object-cover rounded-full relative z-10"
+                className="
+        w-full h-full
+        object-cover
+        rounded-full
+        scale-110   /* 👈 zoom image */
+        object-center
+        relative z-10
+      "
               />
             </div>
           </div>
@@ -161,7 +494,7 @@ const SanaBeautySalon = () => {
           </div>
 
           {/* Call to Action Buttons */}
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 animate-[fadeIn_3.5s_ease-out] px-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 animate-[fadeIn_3.5s_ease-out] px-4 relative z-30">
             <a
               href="https://wa.me/918123560598"
               className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-2xl flex items-center gap-2 justify-center text-sm sm:text-base"
@@ -177,8 +510,7 @@ const SanaBeautySalon = () => {
             </a>
           </div>
         </div>
-
-        {/* Scroll indicator */}
+        Scroll indicator
         <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <div className="w-6 h-10 border-2 border-yellow-300/60 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-yellow-300/80 rounded-full mt-2 animate-pulse" />
@@ -189,35 +521,55 @@ const SanaBeautySalon = () => {
       {/* Contact Bar */}
       <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-3 sm:py-4 sticky top-0 z-40 shadow-2xl border-b border-yellow-500/30">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm md:text-base">
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 text-xs sm:text-sm md:text-base">
+            {/* Call */}
             <a
-              href="https://wa.me/918123560598"
-              className="flex items-center gap-1 sm:gap-2 hover:scale-110 hover:text-yellow-400 transition-all"
+              href="tel:+918123560598"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 hover:bg-green-700 hover:scale-110 transition-all shadow-md"
             >
               <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="hidden sm:inline">81235 60598</span>
+              <span className="hidden sm:inline">Call</span>
             </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/918123560598"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500 hover:bg-emerald-600 hover:scale-110 transition-all shadow-md"
+            >
+              <span className="text-lg">💬</span>
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+
+            {/* Email */}
             <a
               href="mailto:sajidamulla27@gmail.com"
-              className="flex items-center gap-1 sm:gap-2 hover:scale-110 hover:text-yellow-400 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500 hover:bg-yellow-600 hover:scale-110 transition-all shadow-md text-black"
             >
               <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="hidden md:inline">sajidamulla27@gmail.com</span>
+              <span className="hidden md:inline">Email</span>
             </a>
+
+            {/* Instagram */}
             <a
               href="https://www.instagram.com/sanabeautyparlour_/?igsh=eDZ4YzI2cng0ZXBi"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 sm:gap-2 hover:scale-110 hover:text-pink-400 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-full 
+        bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 
+        hover:scale-110 transition-all shadow-md"
             >
               <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="hidden sm:inline">Instagram</span>
             </a>
+
+            {/* YouTube */}
             <a
               href="https://www.youtube.com/@sajidamullavlogs"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 sm:gap-2 hover:scale-110 hover:text-red-400 transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-600 hover:bg-red-700 hover:scale-110 transition-all shadow-md"
             >
               <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="hidden sm:inline">YouTube</span>
@@ -229,7 +581,7 @@ const SanaBeautySalon = () => {
       {/* Services Section */}
       <div
         id="services"
-        className="bg-gradient-to-br from-gray-900 via-black to-gray-900 px-4 py-12 sm:py-16"
+        className="scroll-mt-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 px-4 py-12 sm:py-16"
       >
         <div className="container mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 sm:mb-4 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
@@ -253,10 +605,16 @@ const SanaBeautySalon = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="text-4xl sm:text-5xl md:text-6xl mb-2">
-                        💄
+                        {service.images.length > 0 && (
+                          <img
+                            src={service.images[0]}
+                            alt={service.title}
+                            className="w-full h-full object-cover"
+                          />
+                        )}
                       </div>
                       <p className="text-xs sm:text-sm font-medium text-pink-300">
-                        {service.photos} Photos
+                        {service.images.length} Photos
                       </p>
                     </div>
                   </div>
@@ -276,7 +634,7 @@ const SanaBeautySalon = () => {
                       {service.price}
                     </span>
                     <span className="text-xs sm:text-sm text-gray-400">
-                      {service.photos} photos
+                      {service.images.length} photos
                     </span>
                   </div>
                   <button className="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-2 sm:py-3 rounded-lg hover:from-pink-500 hover:to-purple-500 transition-all transform group-hover:scale-105 shadow-lg text-sm sm:text-base font-semibold">
@@ -356,7 +714,7 @@ const SanaBeautySalon = () => {
                 </p>
               </div>
               <a
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/CWKfW64nxNy9XVUs9?g_st=awb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white text-center py-2 sm:py-3 rounded-lg hover:from-pink-700 hover:to-purple-700 transition-all transform hover:scale-105 text-sm sm:text-base font-semibold"
@@ -387,7 +745,7 @@ const SanaBeautySalon = () => {
                 Price: {selectedGallery.price}
               </p>
               <p className="text-gray-400 text-xs sm:text-sm mt-1">
-                Image {currentImageIndex + 1} of {selectedGallery.photos}
+                Image {currentImageIndex + 1} of {selectedGallery.images.length}
               </p>
             </div>
 
@@ -399,9 +757,11 @@ const SanaBeautySalon = () => {
                   <p className="text-lg sm:text-xl font-semibold">
                     Photo {currentImageIndex + 1}
                   </p>
-                  <p className="text-xs sm:text-sm mt-2 opacity-75">
-                    Sample image placeholder
-                  </p>
+                  <img
+                    src={selectedGallery.images[currentImageIndex]}
+                    alt="gallery"
+                    className="w-full h-[70vh] object-contain rounded-lg"
+                  />
                 </div>
               </div>
 
@@ -475,26 +835,26 @@ const SanaBeautySalon = () => {
         </div>
       </footer>
 
-      <style jsx>{`
-        @keyframes shine {
-          0% {
-            transform: translateX(-100%) rotate(12deg);
-          }
-          100% {
-            transform: translateX(300%) rotate(12deg);
-          }
-        }
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
+      <style>{`
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(12deg);
+    }
+    100% {
+      transform: translateX(300%) rotate(12deg);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`}</style>
     </div>
   );
 };
