@@ -389,7 +389,7 @@ const SanaBeautySalon = () => {
   const nextImage = () => {
     if (selectedGallery) {
       setCurrentImageIndex(
-        (prev) => (prev + 1) % selectedGallery.images.length
+        (prev) => (prev + 1) % selectedGallery.images.length,
       );
     }
   };
@@ -399,7 +399,7 @@ const SanaBeautySalon = () => {
       setCurrentImageIndex(
         (prev) =>
           (prev - 1 + selectedGallery.images.length) %
-          selectedGallery.images.length
+          selectedGallery.images.length,
       );
     }
   };
@@ -714,7 +714,7 @@ const SanaBeautySalon = () => {
                 </p>
               </div>
               <a
-                href="https://maps.app.goo.gl/CWKfW64nxNy9XVUs9?g_st=awb"
+                href="https://www.google.com/maps/place/15%C2%B051'54.0%22N+74%C2%B031'57.0%22E/@15.8650118,74.5299102,17z/data=!3m1!4b1!4m4!3m3!8m2!3d15.8650118!4d74.5324851?hl=en&entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white text-center py-2 sm:py-3 rounded-lg hover:from-pink-700 hover:to-purple-700 transition-all transform hover:scale-105 text-sm sm:text-base font-semibold"
