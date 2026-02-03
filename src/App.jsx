@@ -125,6 +125,7 @@ const SanaBeautySalon = () => {
         "/images/services/engagement/3.jpg",
         "/images/services/engagement/4.jpg",
         "/images/services/engagement/5.jpg",
+        "/images/services/engagement/6.jpg"
       ],
     },
     {
