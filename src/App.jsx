@@ -238,6 +238,7 @@ const SanaBeautySalon = () => {
         "/images/services/beautiful-hd/4.jpg",
         "/images/services/beautiful-hd/5.jpg",
         "/images/services/beautiful-hd/6.jpg",
+        
       ],
     },
     {
